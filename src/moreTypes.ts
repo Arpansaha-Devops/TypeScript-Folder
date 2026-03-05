@@ -13,7 +13,7 @@ console.log(responseLength)
 
 // let bookString = '{"name" : "arpan"}';
 
-// let bookObj = JSON.parse(bookString) as book  // "This as is known as TypeAssertion"
+// let bookObj = JSON.parse(bookString) as book  // "This "as" is known as TypeAssertion"
 
 // console.log(bookObj.name)
 

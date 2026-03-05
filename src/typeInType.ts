@@ -5,7 +5,7 @@ console.log(name)
 
 let str : string = "Arpan";
 
-function printsTr(str:string) {  // this is known as annotation means you have to explecitly declare the Data type
+function printsTr(str:string) {  // this is known as our project 2 means you have to explecitly declare the Data type
     return `Hello,${str}`
 }
 
