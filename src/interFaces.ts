@@ -10,17 +10,35 @@
 
 
 // This is called intersection types --- 
-type A = {
-  name: string
+// type A = {
+//   name: string
+// }
+
+// type B = {
+//   age: number
+// }
+
+// type C = A & B
+
+// const user: C = {
+//   name: "Arpan",
+//   age: 22
+// }
+
+type Chai = {
+  name : string,
+  age? : number,
+  email : string
 }
 
-type B = {
-  age: number
+function printUser(user:Chai) {
+   console.log(user)
+}
+const user: Chai = {
+  name: "arpan",
+  // age: 22,
+  email: "arpan@email.com"
 }
 
-type C = A & B
-
-const user: C = {
-  name: "Arpan",
-  age: 22
-}
+// printUser({name : "arpan", age : 22, email : "arpan@email.com"})
+printUser(user)

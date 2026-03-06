@@ -12,15 +12,25 @@ let apiRequest : "pending" | "fullfiled" | "error" = "pending"
 
 
 
-let arr = ["20","40","60","80"];
+// let arr = ["20","40","60","80"];
 
-let result = []
+// let result = []
 
-for (const key of arr) {
-    if (key === "80") {
-        result.push(key)
-        break
-    }
+// for (const key of arr) {
+//     if (key === "80") {
+//         result.push(key)
+//         break
+//     }
+// }
+
+// console.log(result)
+
+
+type teaType = "masala" | "ginger" | "elichi";
+
+function printTea(tea:teaType) {
+    console.log(tea)
 }
 
-console.log(result)
+let tea : teaType = "elichi";
+printTea(tea)
