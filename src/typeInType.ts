@@ -10,3 +10,12 @@ function printsTr(str:string) {  // this is known as our project 2 means you hav
 }
 
 console.log(printsTr(str))
+
+
+// directly inside the function ----
+
+function createOrder(order: { id: string; price: number }) {
+  console.log(order.id, order.price);
+}
+
+createOrder({ id: "ORD1", price: 500 });
