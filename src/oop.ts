@@ -92,3 +92,27 @@ const employee = new Employee1("Bob", 25);
 const manager = new Manegaer1("Alice", 30, "Engineering");
 manager.printDepartment(); // This will work because printDepartment
 manager.printName() // This will work because printName is a method of the Employee1 class and it can access the private properties of the class through inheritance.By super keyword we are calling the constructor of the parent class and passing the name and age to it.
+
+
+
+// composition ----
+
+class Engine {
+  start(): void {
+    console.log("Engine started");
+  }
+}
+
+class Car {
+  constructor(private engine: Engine) {
+    this.engine = engine;
+  }
+
+  start(): void {
+    this.engine.start();
+  }
+}
+
+const engine = new Engine();
+const car = new Car(engine);
+car.start(); // This will call the start method of the Engine class through composition.
