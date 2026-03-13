@@ -113,23 +113,43 @@ console.log(person3); // we can also merge two interfaces with the same name usi
 
 // extends interface 
 
-interface vehicle {
-    name : string;
-    price : number;
+// interface vehicle {
+//     name : string;
+//     price : number;
+// }
+
+// interface car {
+//     model : string; 
+// }
+
+// interface bike extends vehicle, car {
+//     type : string;
+// }   
+
+// const bike1 : bike = {
+//     name : "Royal Enfield",
+//     price : 150000,
+//     type : "Cruiser",
+//     model : "Classic 350"
+// }
+// console.log(bike1);
+
+
+
+
+
+
+interface HasLength {
+  length: number;
 }
 
-interface car {
-    model : string; 
+interface Container<T extends HasLength> {
+  item: T;
 }
 
-interface bike extends vehicle, car {
-    type : string;
-}   
 
-const bike1 : bike = {
-    name : "Royal Enfield",
-    price : 150000,
-    type : "Cruiser",
-    model : "Classic 350"
-}
-console.log(bike1);
+const c: Container<string> = {
+  item: "hello"
+};
+
+console.log(c.item.length); // Output: 5 // we can use the length property of the string because it is extending the HasLength interface which has the length property

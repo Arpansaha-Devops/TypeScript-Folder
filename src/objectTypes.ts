@@ -71,6 +71,18 @@ type order = {
 // funChay({isHot : false})
 
 
+type chai = {
+    name : string,
+    price? : number,
+    quantity : number
+};
+
+function printChai(chai : Partial<chai>){
+    console.log(chai.price)
+}
+
+printChai({name : "Lemon Chai", price : 30}) // here we are using partial keyWord so we can send single value or all values in the function printChai
+
 
 // Required keyWord --
 
