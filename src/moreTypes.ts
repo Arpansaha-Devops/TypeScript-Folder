@@ -60,7 +60,11 @@ function redirectUser(role:Role) : void {
        console.log("Redirecting User To User Dashboard..."); 
        return
     }
-      role;
+       else if (role === "SuperDashboard") {
+        console.log("Redirecting User To SuperDashboard...");
+        return
+    }
+    role;
 }
 
-redirectUser("user")
+redirectUser("admin")

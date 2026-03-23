@@ -49,6 +49,29 @@ type order = {
 }
 
 
+function printOrderDetails(order : order){
+    console.log(`Order ID: ${order.id}`);
+    console.log("Items:");
+    order.items.forEach((item, index) => {
+        console.log(`  ${index + 1}. ${item.name} - Quantity: ${item.quantity}`);
+    }
+    );
+    console.log(`Shipping Address: ${order.address.street}, Pin: ${order.address.pin}`);
+}
+
+const myOrder : order = {
+    id : "12345",
+    items : [
+        { name: "Laptop", quantity: 1 },
+        { name: "Mouse", quantity: 2 }
+    ],
+    address : {
+        street: "123 Main St",
+        pin: 123456
+    }
+};
+
+printOrderDetails(myOrder);
 
 
 // Partial Datatypes ----
